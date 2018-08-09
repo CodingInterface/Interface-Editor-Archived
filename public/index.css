@@ -1,0 +1,133 @@
+body {
+  margin: 0px;
+  height: 100%;
+  cursor: default;
+  padding: 0;
+  background-color: #222;
+  color: white;
+  font-family: sans-serif;
+  animation-name: blend-1;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+}
+
+.bg-container {
+  position: absolute;
+  height: calc(100% + 20px);
+  width: calc(100% + 20px);
+  z-index: -1000;
+  top: -10px;
+  left: -10px;
+}
+
+.bg {
+  background: url("Untitled2333.png");
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 2s;
+}
+.spacer {
+  margin-top: 100px;
+}
+.links a:not(:last-child) {
+  margin-right: 70px;
+}
+.link {
+  color: white;
+  opacity: .25;
+  transition: opacity 1s, text-shadow 1s;
+    }
+.link:hover {
+  text-shadow: 0px 0px 36px white;
+  opacity: 1;
+  color: white;
+  transition: opacity .5s, text-shadow .5s;
+    }
+.logo {
+  width: 100%;
+  animation-name: logo-in;
+  animation-duration: 7s;
+  animation-timing-function: ease-in;
+  -webkit-animation: mover 4s infinite  alternate;
+  animation: mover 4s infinite  alternate;
+  }
+
+.welcome-bg {
+  position:absolute
+    }
+.welcome-bg--screenshot {
+  bottom: 50%;
+  right:  50%;
+  margin-bottom:  -244px;
+  margin-right: 40px;
+  width:  780px;
+  height: 488px;
+  border-radius:  5px;
+  box-shadow: 0 20px 30px rgba(0,0,0,0.5);
+  transition: filter 2s;
+  filter: brightness(0.75) contrast(1) sepia(0.7) hue-rotate(-5deg) saturate(3.5);
+  left: 50%;
+  margin-left: 40px;
+  filter: brightness(0.7) contrast(0.8) sepia(1) hue-rotate(160deg) saturate(3);
+  filter: brightness(0.7) contrast(1) sepia(1) hue-rotate(115deg) saturate(1.5);
+  position: relative;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  margin: 0;
+  max-width: 100%;
+  height: auto
+    }
+.welcome-bg--screenshot:hover {
+  filter: none
+    }
+.welcome-bgs {
+  margin: 50px 0
+    }
+
+h1 {
+  text-align: center;
+  margin: auto;
+  padding-top: 1em;
+}
+
+
+
+@-webkit-keyframes mover {
+0% { transform: translateY(0); }
+100% { transform: translateY(-50px); }
+}
+@keyframes mover {
+0% { transform: translateY(0); }
+100% { transform: translateY(-50px); }
+}
+
+@keyframes logo-in {
+  from {
+    filter: grayscale(100%) brightness(130%);
+      }
+        to {
+            filter: grayscale(0%) brightness(100%);
+        }
+    }
+
+    @keyframes link-out {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: .50;
+        }
+    }
+
+    @keyframes blend-1 {
+            from {
+                filter: grayscale(100%) brightness(0%);
+            }
+            to {
+                filter: grayscale(0%) brightness(100%);
+            }
+        }
